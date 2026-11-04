@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#092f70">
+
+    <title>Uang Kas Sekolah</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo-box">
+            <img src="assets/logo.png"
+                 alt="Logo Sekolah"
+                 class="logo">
+        </div>
+
+        <p class="nama-sekolah">SMK SWASTA PRAMA ARTHA</p>
+
+        <h1>UANG KAS SEKOLAH</h1>
+
+        <p class="subtitle">
+            Sistem Informasi Keuangan Sekolah
+        </p>
+
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav class="navbar">
+        <a href="#dashboard">🏠 Beranda</a>
+        <a href="#siswa">🎓 Data Siswa</a>
+        <a href="#pengeluaran">💸 Pengeluaran</a>
+        <a href="#riwayat">📋 Riwayat</a>
+    </nav>
+
+    <main class="container">
+
+        <!-- DASHBOARD -->
+        <section id="dashboard">
+
+            <div class="judul-section">
+                <h2>📊 Dashboard</h2>
+                <p>Ringkasan keuangan sekolah</p>
+            </div>
+
+            <div class="cards">
+
+                <div class="card biru">
+                    <div class="ikon">💰</div>
+                    <p>Total Pemasukan</p>
+                    <h3 id="pemasukan">Rp0</h3>
+                </div>
+
+                <div class="card orange">
+                    <div class="ikon">💼</div>
+                    <p>Total Pengeluaran</p>
+                    <h3 id="pengeluaranTotal">Rp0</h3>
+                </div>
+
+                <div class="card hijau">
+                    <div class="ikon">🏦</div>
+                    <p>Saldo Kas</p>
+                    <h3 id="saldo">Rp0</h3>
+                </div>
+
+                <div class="card ungu">
+                    <div class="ikon">🎓</div>
+                    <p>Jumlah Siswa</p>
+                    <h3 id="jumlahSiswa">0</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- DATA SISWA -->
+        <section id="siswa" class="panel">
+
+            <h2>🎓 Data Siswa</h2>
+
+            <p class="deskripsi">
+                Tambahkan dan kelola data siswa.
+            </p>
+
+            <form id="formSiswa">
+
+                <label for="nama">Nama Siswa</label>
+
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Masukkan nama siswa"
+                    required
+                >
+
+                <label for="kelas">Pilih Jurusan dan Kelas</label>
+
+                <select id="kelas" required>
+
+                    <option value="">
+                        -- Pilih Kelas --
+                    </option>
+
+                    <optgroup label="Rekayasa Perangkat Lunak (RPL)">
+                        <option value="RPL 1">RPL 1</option>
+                        <option value="RPL 2">RPL 2</option>
+                        <option value="RPL 3">RPL 3</option>
+                    </optgroup>
+
+                    <optgroup label="Teknik Sepeda Motor (TSM)">
+                        <option value="TSM 1">TSM 1</option>
+                        <option value="TSM 2">TSM 2</option>
+                        <option value="TSM 3">TSM 3</option>
+                    </optgroup>
+
+                    <optgroup label="MP">
+                        <option value="MP 1">MP 1</option>
+                        <option value="MP 2">MP 2</option>
+                        <option value="MP 3">MP 3</option>
+                    </optgroup>
+
+                </select>
+
+                <button type="submit">
+                    ＋ Tambah Siswa
+                </button>
+
+            </form>
+
+            <div class="info-kas">
+                💡 Iuran kas setiap siswa:
+                <b>Rp5.000</b>
+            </div>
+
+            <h3 class="subjudul">Daftar Siswa</h3>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Kelas</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="daftarSiswa"></tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- PENGELUARAN -->
+        <section id="pengeluaran" class="panel">
+
+            <h2>💸 Pengeluaran Kas</h2>
+
+            <p class="deskripsi">
+                Catat penggunaan uang kas.
+            </p>
+
+            <form id="formPengeluaran">
+
+                <label for="keterangan">
+                    Keterangan
+                </label>
+
+                <input
+                    type="text"
+                    id="keterangan"
+                    placeholder="Contoh: Membeli sapu"
+                    required
+                >
+
+                <label for="nominal">
+                    Nominal Pengeluaran
+                </label>
+
+                <input
+                    type="number"
+                    id="nominal"
+                    placeholder="Masukkan nominal"
+                    min="1"
+                    step="1"
+                    required
+                >
+
+                <button type="submit" class="btn-orange">
+                    Simpan Pengeluaran
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- RIWAYAT -->
+        <section id="riwayat" class="panel">
+
+            <h2>📋 Riwayat Transaksi</h2>
+
+            <p class="deskripsi">
+                Catatan pemasukan dan pengeluaran kas.
+            </p>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Jenis</th>
+                            <th>Keterangan</th>
+                            <th>Nominal</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="daftarRiwayat"></tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-icon">💰</div>
+
+        <h3>UANG KAS SEKOLAH</h3>
+
+        <p>SMK Swasta Prama Artha</p>
+
+        <small>
+            © 2026 Sistem Informasi Uang Kas Sekolah
+        </small>
+
+    </footer>
+
+</body>
+</html>
