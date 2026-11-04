@@ -1,1 +1,350 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5fc;
+    color: #19345c;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, #06275f, #0879ed);
+    color: white;
+    text-align: center;
+    padding: 25px 15px 30px;
+    border-bottom: 5px solid #f4bd39;
+}
+
+.logo-box {
+    width: 115px;
+    height: 115px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nama-sekolah {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffe18a;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 25px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 13px;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 12px;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 10px #00000012;
+}
+
+.navbar a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #073b8c;
+    background: #eaf2ff;
+    padding: 11px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* KONTEN */
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    padding: 18px 13px;
+}
+
+section {
+    margin-bottom: 24px;
+    scroll-margin-top: 75px;
+}
+
+.judul-section {
+    margin-bottom: 15px;
+}
+
+.judul-section h2,
+.panel h2 {
+    font-size: 21px;
+    color: #073b8c;
+    margin-bottom: 7px;
+}
+
+.judul-section p,
+.deskripsi {
+    font-size: 13px;
+    color: #7a879b;
+    margin-bottom: 15px;
+}
+
+/* DASHBOARD */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.card {
+    padding: 16px 12px;
+    color: white;
+    border-radius: 15px;
+    min-width: 0;
+    box-shadow: 0 5px 12px #00000012;
+}
+
+.ikon {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: clamp(15px, 4vw, 20px);
+    overflow-wrap: anywhere;
+}
+
+.biru {
+    background: linear-gradient(135deg, #08a6ed, #075ee9);
+}
+
+.orange {
+    background: linear-gradient(135deg, #ffae00, #ef6900);
+}
+
+.hijau {
+    background: linear-gradient(135deg, #00c77b, #009b59);
+}
+
+.ungu {
+    background: linear-gradient(135deg, #a044ff, #6524d9);
+}
+
+/* PANEL */
+.panel {
+    background: white;
+    padding: 18px 14px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px #0000000c;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd6e4;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    background: #fbfdff;
+    color: #19345c;
+}
+
+input:focus,
+select:focus {
+    border-color: #0879ed;
+    box-shadow: 0 0 0 2px #0879ed20;
+}
+
+/* TOMBOL */
+button {
+    width: 100%;
+    padding: 13px;
+    background: #0879ed;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(.98);
+}
+
+.btn-orange {
+    background: #ef8100;
+}
+
+/* INFO KAS */
+.info-kas {
+    background: #eaf4ff;
+    color: #0752a3;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.subjudul {
+    font-size: 15px;
+    margin-top: 20px;
+    color: #073b8c;
+}
+
+/* TABEL */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 12px;
+}
+
+table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+}
+
+th {
+    background: #073b8c;
+    color: white;
+}
+
+th, td {
+    padding: 11px 9px;
+    text-align: left;
+    border-bottom: 1px solid #e5eaf2;
+    font-size: 12px;
+}
+
+td {
+    background: white;
+}
+
+td[colspan] {
+    text-align: center;
+    color: #7a879b;
+    padding: 20px;
+}
+
+/* STATUS */
+.status {
+    display: inline-block;
+    background: #fff0cf;
+    color: #956000;
+    padding: 6px 8px;
+    border-radius: 15px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.status.lunas {
+    background: #d9f8e8;
+    color: #087744;
+}
+
+/* AKSI */
+.aksi {
+    width: auto;
+    padding: 8px;
+    font-size: 11px;
+    margin: 2px;
+}
+
+.bayar {
+    background: #079b60;
+}
+
+.hapus {
+    background: #dc3545;
+}
+
+/* FOOTER */
+footer {
+    background: #062e70;
+    color: white;
+    text-align: center;
+    padding: 25px 12px;
+    border-top: 5px solid #f5bd32;
+}
+
+.footer-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+footer p {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+footer small {
+    font-size: 11px;
+    color: #c9dcfa;
+}
+
+/* LAYAR BESAR */
+@media (min-width: 700px) {
+    .container {
+        padding: 25px;
+    }
+
+    .header h1 {
+        font-size: 35px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
